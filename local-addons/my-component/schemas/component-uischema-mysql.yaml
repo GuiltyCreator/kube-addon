@@ -1,0 +1,23 @@
+- jsonKey: initdb
+  lable: Initdb
+  description: 如果需要初始化数据库，需要创建相关configmap,填写configmap的name即可
+  sort: 1
+- jsonKey: hostPath
+  lable: HostPath
+  sort: 2
+- jsonKey: serviceType
+  lable: ServiceType
+  sort: 3
+- jsonKey: nodePort
+  lable: NodePort
+  description: 如果ServiceType为NodePort，可以通过此项设置nodeport端口
+  validate:
+    min: 30000
+  sort: 4
+- jsonKey: rootPassword
+  lable: Root Password
+  sort: 5
+- jsonKey: database
+  lable: database
+  description: 新建数据库
+  sort: 6

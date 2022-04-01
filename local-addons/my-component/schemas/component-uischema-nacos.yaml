@@ -1,0 +1,23 @@
+- jsonKey: mysql
+  lable: Mysql Config
+  subParameters:
+    - jsonKey: db
+      sort: 1
+    - jsonKey: host
+      sort: 2
+    - jsonKey: port
+      sort: 3
+    - jsonKey: user
+      sort: 4
+    - jsonKey: password
+      sort: 5
+  sort: 1
+- jsonKey: serviceType
+  lable: ServiceType
+  sort: 2
+- jsonKey: nodePort
+  lable: NodePort
+  description: 如果ServiceType为NodePort，可以通过此项设置nodeport端口
+  validate:
+    min: 30000
+  sort: 3

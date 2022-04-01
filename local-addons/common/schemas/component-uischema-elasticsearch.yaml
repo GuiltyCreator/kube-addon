@@ -1,0 +1,17 @@
+- jsonKey: name
+  sort: 1
+  description: "名称前缀。名称组成：名称前缀-组件名称"
+- uiType: ImageInput
+  jsonKey: image
+  label: Container Image
+  sort: 2
+  validate:
+    required: true
+- jsonKey: imagePullPolicy
+  sort: 3
+- jsonKey: accessPort
+  sort: 4
+  description: "内部容器访问端口"
+- jsonKey: clusterPort
+  sort: 5
+  description: "集群端口"

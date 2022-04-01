@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ngmanager
+  name: ngmanager-web
+spec:
+  selector:
+    matchLabels:
+      app: ngmanager-web
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: ngmanager-web
+    spec:
+      containers:
+        - name: ngmanager-web
+          image: harbor.dev.wh.digitalchina.com/oam-test/ngmanager-web:0.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8888
+              name: http-port

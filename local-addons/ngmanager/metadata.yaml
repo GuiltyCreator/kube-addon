@@ -1,0 +1,19 @@
+name: ngmanager
+version: 1.0.0
+description: Example adddon.
+icon: http://www.digitalchina.com/statics/zhsite/images/icon/logo.png
+url: https://ngmanager.oam-test.com:35819
+
+tags:
+  - only_example
+
+deployTo:
+  runtimeCluster: false
+
+dependencies:
+  - name: common
+
+needNamespace:
+  - ngmanager
+
+invisible: false

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ngmanager
+  name: ngmanager-system
+spec:
+  selector:
+    matchLabels:
+      app: ngmanager-system
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: ngmanager-system
+    spec:
+      containers:
+        - name: ngmanager-system
+          image: harbor.dev.wh.digitalchina.com/oam-test/ngmanager-system:0.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9010
+              name: grpc-port
+            - containerPort: 59011
+              name: broker-port

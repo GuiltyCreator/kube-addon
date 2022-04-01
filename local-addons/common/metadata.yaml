@@ -1,0 +1,16 @@
+name: common
+version: 1.0.0
+description: Example adddon.
+icon: http://www.digitalchina.com/statics/zhsite/images/icon/logo.png
+url: example.com
+
+tags:
+  - only_example
+
+deployTo:
+  runtimeCluster: false
+
+#dependencies: []
+#  - name: addon_name
+
+invisible: false

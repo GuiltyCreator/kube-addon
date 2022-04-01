@@ -1,0 +1,29 @@
+- jsonKey: name
+  sort: 1
+  description: "名称前缀。名称组成：名称前缀-组件名称"
+- uiType: ImageInput
+  jsonKey: image
+  label: Container Image
+  sort: 2
+  validate:
+    required: true
+- jsonKey: imagePullPolicy
+  sort: 3
+- jsonKey: port
+  sort: 4
+  description: "clusterPort的端口"
+- jsonKey: PGDATA
+  sort: 5
+  description: "数据存放目录"
+- jsonKey: POSTGRES_DB
+  sort: 6
+  description: "初始化数据库"
+- jsonKey: POSTGRES_USER
+  sort: 7
+  description: "管理员账号"
+- jsonKey: POSTGRES_PASSWORD
+  sort: 8
+  description: "管理员密码"
+- jsonKey: initsql
+  sort: 9
+  description: "初始化脚本"

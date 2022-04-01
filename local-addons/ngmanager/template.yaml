@@ -1,0 +1,17 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: ngmanager
+  namespace: vela-system
+spec:
+#  components:
+#    - name: "ngmanager-etcd"
+#      type: "etcd"
+#      properties:
+#        name: "ngmanager"
+#        namespace: "ngmanager"
+#        image: "harbor.dev.wh.digitalchina.com/oam-test/etcd:v3.5.0"
+#        imagePullPolicy: "Always"
+#        accessPort: 2379
+#        clusterPort: 2380
+# component definition of resource dir .

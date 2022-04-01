@@ -1,0 +1,2 @@
+# Common addon    
+common components

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ngmanager
+  name: ngmanager-gateway
+spec:
+  selector:
+    matchLabels:
+      app: ngmanager-gateway
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: ngmanager-gateway
+    spec:
+      containers:
+        - name: ngmanager-gateway
+          image: harbor.dev.wh.digitalchina.com/oam-test/ngmanager-gateway:0.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9000
+              name: http-port
+            - containerPort: 9001
+              name: grpc-port
